@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+
+
+<div id="btn">
+    <div class="btncontent">
+        <button id="start-btn"> Start </button>
+        <h1 id="result"></h1>
+    </div>
+</div>
+    <div id="main-box">
+        <div id="inside-row1">
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+        </div>
+    
+        <div id="inside-row2">
+            <div id="box4"></div>
+            <div id="box5"></div>
+            <div id="box6"></div>
+        </div>
+        <div id="inside-row3">
+            <div id="box7"></div>
+            <div id="box8"></div>
+            <div id="box9"></div>
+        </div>
+        
+    </div>
+    <div id="reload"><i class="fas fa-redo-alt"></i></div>
+
+
+    <script>
+        var box1 = document.getElementById("box1");
+        var box2 = document.getElementById("box2");
+        var box3 = document.getElementById("box3");
+        var box4 = document.getElementById("box4");
+        var box5 = document.getElementById("box5");
+        var box6 = document.getElementById("box6");
+        var box7 = document.getElementById("box7");
+        var box8 = document.getElementById("box8");
+        var box9 = document.getElementById("box9");
+        var result = document.getElementById("result");
+        var reload = document.getElementById("reload");
+        var mainbox = document.getElementById("main-box");
+        var btn = document.getElementById("start-btn");
+        var opt = ['X','O'];
+        var finalopt = opt[Math.floor(Math.random()* 2)];
+
+            btn.addEventListener("click",()=>{
+            alert("the first player is : "+ finalopt);
+            mainbox.style.pointerEvents = "auto";
+            btn.style.pointerEvents = "none";
+        });
+
+        box1.addEventListener("click",()=>{
+            box1.innerHTML = finalopt;
+            check();
+            box1.style.pointerEvents = "none";
+            if (finalopt == "X") {
+                finalopt = "O";
+            } else {
+                finalopt = "X";
+            }
+        });
+
+        box2.addEventListener("click",()=>{
+            box2.innerHTML = finalopt;
+            check();
+            box2.style.pointerEvents = "none";
+            if (finalopt == "X") {
+                finalopt = "O";
+            } else {
+                finalopt = "X";
+            }
+        });
+
+        box3.addEventListener("click",()=>{
+            box3.innerHTML = finalopt;
+            check();
+            box3.style.pointerEvents = "none";
+            if (finalopt == "X") {
+                finalopt = "O";
+            } else {
+                finalopt = "X";
+            }
+        });
+
+        box4.addEventListener("click",()=>{
+            box4.innerHTML = finalopt;
+            check();
+            box4.style.pointerEvents = "none";
+            if (finalopt == "X") {
+                finalopt = "O";
+            } else {
+                finalopt = "X";
+            }
+        });
+        
+        box5.addEventListener("click",()=>{
+            box5.innerHTML = finalopt;
+            check();
+            box5.style.pointerEvents = "none";
+            if (finalopt == "X") {
+                finalopt = "O";
+            } else {
+                finalopt = "X";
+            }
+        });
+
+        box6.addEventListener("click",()=>{
+            box6.innerHTML = finalopt;
+            check();
+            box6.style.pointerEvents = "none";
+            if (finalopt == "X") {
+                finalopt = "O";
+            } else {
+                finalopt = "X";
+            }
+        });
+
+        box7.addEventListener("click",()=>{
+            box7.innerHTML = finalopt;
+            check();
+            box7.style.pointerEvents = "none";
+            if (finalopt == "X") {
+                finalopt = "O";
+            } else {
+                finalopt = "X";
+            }
+        });
+
+        box8.addEventListener("click",()=>{
+            box8.innerHTML = finalopt;
+            check();
+            box8.style.pointerEvents = "none";
+            if (finalopt == "X") {
+                finalopt = "O";
+            } else {
+                finalopt = "X";
+            }
+        });
+
+        box9.addEventListener("click",()=>{
+            box9.innerHTML = finalopt;
+            check();
+            box9.style.pointerEvents = "none";
+            if (finalopt == "X") {
+                finalopt = "O";
+            } else {
+                finalopt = "X";
+            }
+        });
+
+        const check=()=>{
+            if ((box1.innerHTML=="X"&&box2.innerHTML=="X"&&box3.innerHTML=="X")||(box4.innerHTML=="X"&&box5.innerHTML=="X"&&box6.innerHTML=="X")||(box7.innerHTML=="X"&&box8.innerHTML=="X"&&box9.innerHTML=="X")||(box1.innerHTML=="X"&&box5.innerHTML=="X"&&box9.innerHTML=="X")||(box3.innerHTML=="X"&&box5.innerHTML=="X"&&box7.innerHTML=="X")||(box1.innerHTML=="X"&&box4.innerHTML=="X"&&box7.innerHTML=="X")||(box2.innerHTML=="X"&&box5.innerHTML=="X"&&box8.innerHTML=="X")||(box3.innerHTML=="X"&&box6.innerHTML=="X"&&box9.innerHTML=="X")) {
+            result.innerHTML = "Player X won";
+            }
+            else if((box1.innerHTML=="O"&&box2.innerHTML=="O"&&box3.innerHTML=="O")||(box4.innerHTML=="O"&&box5.innerHTML=="O"&&box6.innerHTML=="O")||(box7.innerHTML=="O"&&box8.innerHTML=="O"&&box9.innerHTML=="O")||(box1.innerHTML=="O"&&box5.innerHTML=="O"&&box9.innerHTML=="O")||(box3.innerHTML=="O"&&box5.innerHTML=="O"&&box7.innerHTML=="O")||(box1.innerHTML=="O"&&box4.innerHTML=="O"&&box7.innerHTML=="O")||(box2.innerHTML=="O"&&box5.innerHTML=="O"&&box8.innerHTML=="O")||(box3.innerHTML=="O"&&box6.innerHTML=="O"&&box9.innerHTML=="O")){
+                result.innerHTML = "Player O won";
+            }
+            if((box1.innerHTML=="X" || box1.innerHTML == "O")&&(box2.innerHTML=="X" || box2.innerHTML == "O")&&(box3.innerHTML=="X" || box3.innerHTML == "O")&&(box4.innerHTML=="X" || box4.innerHTML == "O")&&(box5.innerHTML=="X" || box5.innerHTML == "O")&&(box6.innerHTML=="X" || box6.innerHTML == "O")&&(box7.innerHTML=="X" || box7.innerHTML == "O")&&(box8.innerHTML=="X" || box8.innerHTML == "O")&&(box9.innerHTML=="X" || box9.innerHTML == "O")){
+                if(result.innerHTML !="Player X won" && result.innerHTML != "Player O won"){
+                    result.innerHTML = "Draw";
+                }
+            }
+        
+            if(result.innerHTML!=""){
+                mainbox.style.pointerEvents = "none";
+                reload.style.display = "block";
+            }
+        }
+    
+        reload.addEventListener("click",()=>{
+            window.location.reload();
+        });
+
+        
+        
+
+    </script>
+</body>
+</html>
