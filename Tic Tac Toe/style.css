@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #1e1e1ed9;
+    background-color: #add5ff;
 }
 #btn{
     width: 100%;
@@ -23,8 +23,9 @@ body{
     flex-direction: column;
 }
 h1{
-    color: white;
+    color: black;
     font-family: 'Varela Round', sans-serif;
+    font-weight: bold;
     font-weight: 500;
     letter-spacing: 1px;
     padding-bottom: 20px;
@@ -36,7 +37,7 @@ button{
     border: none;
     outline: none;
     border-radius: 5px;
-    background-color: royalblue;
+    background-color: white;
     cursor: pointer;
 }
 #result{
@@ -105,11 +106,12 @@ button{
 #box7:hover,
 #box8:hover,
 #box9:hover{
-    background-color: rgba(32, 30, 30, 0.623);
+    background-color: rgba(0, 0, 0, 0.363);
 }
 
 #reload{
     width: 100%;
+    padding-top: 380px;
     display: flex;
     justify-content: center;
     align-items: center;
